@@ -1,0 +1,7 @@
+echo "put ur msg"
+read msg
+
+
+git add .
+git commit -m "${msg}"
+git push
