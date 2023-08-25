@@ -26,3 +26,22 @@ list_t *add_node(list_t **head, const char *str)
 	 }
 	return (0);
 }
+
+/**
+  * _strlen - Returns the length of lists to the original
+  * @s: String to continue
+  *
+  * Return: Always (0)
+*/
+int _strlen(const char *s)
+{
+	int c = 0;
+
+	while (*s)
+	{
+		s++;
+		c++;
+	}
+
+	return (c);
+}
