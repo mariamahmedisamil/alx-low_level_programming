@@ -38,8 +38,8 @@ int _strlen(const char *s)
 
 	while (*s)
 	{
-		g++;
 		s++;
+		g++;
 	}
 	return (g);
 }
