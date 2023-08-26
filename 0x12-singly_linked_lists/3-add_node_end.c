@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
   * add_node_end - Adds a new variabls to the end of the main list
   * @head: The main linked list
@@ -12,31 +11,31 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_list, *number;
+	list_t *string_list, *temp;
 
 	if (str != NULL)
 	{
-		new_list = malloc(sizeof(list_t));
-		if (new_list == NULL)
+		string_list = malloc(sizeof(list_t));
+		if (sting_list == NULL)
 			return (NULL);
 
-		new_list->str = strdup(str);
-		new_list->len = _strlen(str);
-		new_list->next = NULL;
+		string_list->str = strdup(str);
+		string_list->len = _strlen(str);
+		string_list->next = NULL;
 
 		if (*head == NULL)
 		{
-			*head  = new_list;
+			*head  = string_list;
 			return (*head);
 		}
 		else
 		{
-			number = *head;
-			while (number->next)
-				number = number->next;
+			temp = *head;
+			while (temp->next)
+				temp = temp->next;
 
-			number->next = new_list;
-			return (number);
+			temp->next = string_list;
+			return (temp);
 		}
 	}
 
