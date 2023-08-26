@@ -1,63 +1,40 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "lists.h"
-
 /**
-  * add_node_end - Adds a new variabls to the end of main list
-  * @head: The main linked list
-  * @str: The string to add any variabls
-  *
-  * Return: Always (NULL)
+* add_node_end - adds a new node at the first of main list
+* @head: pointer to main list_h
+* @str: string to add to basic variabls
+*
+* Return: address of the new Sentence, or NULL if it failed
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_list, *temp;
+list_t *new;
+list_t *temp = *head;
+unsigned int len = 0;
 
-	if (str != NULL)
-	{
-		new_list = malloc(sizeof(list_t));
-		if (new_list == NULL)
-			return (NULL);
+while (str[len])
+len++;
 
-		new_list->str = strdup(str);
-		new_list->len = _strlen(str);
-		new_list->next = NULL;
+new = malloc(sizeof(list_t));
+if (!new)
+return (NULL);
 
-		if (*head == NULL)
-		{
-			*head  = new_list;
-			return (*head);
-		}
-		else
-		{
-			temp = *head;
-			while (temp->next)
-				temp = temp->next;
+new->str = strdup(str);
+new->len = len;
+new->next = NULL;
 
-			temp->next = new_list;
-			return (temp);
-		}
-	}
-
-	return (NULL);
+if (*head == NULL)
+{
+*head = new;
+return (new);
 }
 
-/**
-  * _strlen - Returns the main of a string
-  * @s: String to continue
-  *
-  * Return: string to (c)
-*/
-int _strlen(const char *s)
-{
-	int c = 0;
+while (temp->next)
+temp = temp->next;
 
-	while (*s)
-	{
-		s++;
-		c++;
-	}
+temp->next = new;
 
-	return (c);
+return (new);
 }
