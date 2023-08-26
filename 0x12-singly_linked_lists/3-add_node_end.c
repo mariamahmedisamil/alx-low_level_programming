@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+
 /**
   * add_node_end - Adds a new variabls to the end of the main list
   * @head: The main linked list
@@ -47,7 +48,7 @@ list_t *add_node_end(list_t **head, const char *str)
   * @s: String to continue
   *
   * Return: string to add any word
-  */
+*/
 int _strlen(const char *s)
 {
 	int c = 0;
