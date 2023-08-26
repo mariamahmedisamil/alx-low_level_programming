@@ -11,21 +11,21 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *string_list, *temp;
+	list_t *new_list, *temp;
 
 	if (str != NULL)
 	{
-		string_list = malloc(sizeof(list_t));
-		if (sting_list == NULL)
+		new_list = malloc(sizeof(list_t));
+		if (new_list == NULL)
 			return (NULL);
 
-		string_list->str = strdup(str);
-		string_list->len = _strlen(str);
-		string_list->next = NULL;
+		new_list->str = strdup(str);
+		new_list->len = _strlen(str);
+		new_list->next = NULL;
 
 		if (*head == NULL)
 		{
-			*head  = string_list;
+			*head  = new_list;
 			return (*head);
 		}
 		else
@@ -34,7 +34,7 @@ list_t *add_node_end(list_t **head, const char *str)
 			while (temp->next)
 				temp = temp->next;
 
-			temp->next = string_list;
+			temp->next = new_list;
 			return (temp);
 		}
 	}
