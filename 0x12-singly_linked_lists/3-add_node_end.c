@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
-  * add_node_end - Adds a new variabls to the end of the main list
+  * add_node_end - Adds a new variabls to the end of main list
   * @head: The main linked list
   * @str: The string to add any variabls
   *
@@ -47,7 +47,7 @@ list_t *add_node_end(list_t **head, const char *str)
   * _strlen - Returns the main of a string
   * @s: String to continue
   *
-  * Return: string to add any word
+  * Return: string to (c)
 */
 int _strlen(const char *s)
 {
