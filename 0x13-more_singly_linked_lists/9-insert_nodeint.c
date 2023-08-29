@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
 * insert_nodeint_at_index - inserts a new codes print new file
-* @head: Add new functions to this new file 
+* @head: Add new functions to this new file
 * @idx: Add current codes and fix the error
 * @n: data to insert in the new line having new codes
 *
