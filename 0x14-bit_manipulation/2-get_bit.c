@@ -3,7 +3,7 @@
 * get_bit - get bit at binary to new code
 * @n: binary number
 * @index: insert new binary number
-* Return: Always return (0) or (1) 
+* Return: Always return (0) or (1)
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
